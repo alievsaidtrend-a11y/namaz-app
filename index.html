@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="ru">
+  <head>
+    <meta charset="utf-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <!-- maximum-scale=1: иначе Safari увеличивает страницу при нажатии на поле ввода -->
+    <meta name="viewport" content="width=device-width, initial-scale=1, maximum-scale=1, viewport-fit=cover" />
+    <title>Namaz Planner</title>
+
+    <!-- Установка на экран «Домой» iPhone -->
+    <meta name="apple-mobile-web-app-capable" content="yes" />
+    <meta name="mobile-web-app-capable" content="yes" />
+    <meta name="apple-mobile-web-app-title" content="Намаз" />
+    <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+    <link rel="apple-touch-icon" href="./apple-touch-icon.png" />
+    <link rel="manifest" href="./manifest.json" />
+
+    <style id="expo-reset">
+      html,
+      body {
+        height: 100%;
+        background-color: #ffffff;
+      }
+      @media (prefers-color-scheme: dark) {
+        html,
+        body {
+          background-color: #14161f;
+        }
+      }
+      body {
+        overflow: hidden;
+        margin: 0;
+        -webkit-tap-highlight-color: transparent;
+        -webkit-touch-callout: none;
+      }
+      /* Браузер рисует синюю рамку вокруг поля с курсором — в приложении её нет */
+      input:focus,
+      textarea:focus {
+        outline: none;
+      }
+      /* Отступы под вырез экрана и полоску «Домой» ставит SafeAreaView приложения */
+      #root {
+        display: flex;
+        height: 100%;
+        flex: 1;
+      }
+      /* С экрана «Домой» iPhone высота 100% выходит меньше экрана,
+         и снизу остаётся пустая полоса. Там нет панели Safari, поэтому 100vh безопасен. */
+      @media all and (display-mode: standalone) {
+        html,
+        body,
+        #root {
+          height: 100vh;
+        }
+      }
+    </style>
+  <meta name="theme-color" content="#14161f">
+<meta name="description" content="Планировщик дня, построенный вокруг пяти намазов">
+<link rel="icon" href="/namaz-app/favicon.ico"/></head>
+
+  <body>
+    <noscript>Для работы приложения включите JavaScript.</noscript>
+    <div id="root"></div>
+  <script src="/namaz-app/_expo/static/js/web/entry-0af467833f6d0584512bfe2d25d21109.js" defer></script>
+</body>
+</html>
